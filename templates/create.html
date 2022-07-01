@@ -1,0 +1,29 @@
+{{define "create" }} {{ template "header" }}
+<main>
+  <h1>form added post</h1>
+
+  <form action="/save_article" method="post">
+    <input type="text" name="title" id="tiitle" placeholder="vvod - post" />
+    <br />
+    <!-- <input type="text"> -->
+    <textarea
+      name="anons"
+      id="anons"
+      cols="30"
+      rows="10"
+      placeholder="vvod anons post"
+    ></textarea>
+    <br />
+    <textarea
+      name="full_text"
+      id="anons"
+      cols="30"
+      rows="10"
+      placeholder="vvod POLNI post"
+    >
+    </textarea>
+    <br />
+    <button class="btn">ADDED</button>
+  </form>
+</main>
+{{ template "footer" }} {{ end }}

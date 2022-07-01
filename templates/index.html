@@ -1,0 +1,21 @@
+{{define "index" }}
+
+{{ template "header" }}
+    <h1>MAIN page</h1>
+    <p>yo</p>
+    <ul>
+      {{ range . }}
+      <li>
+        <p>{{ .Title }}</p>
+        <p>{{ .Full_text}}</p>
+        <a href="/post/{{ .Id }}">{{ .Title }}</a>
+        <br>
+      </li>
+      {{ else }}
+      <p>statey-net</p>
+      {{ end }}
+    </ul>
+
+    {{ template "footer" }}
+
+{{ end }}
