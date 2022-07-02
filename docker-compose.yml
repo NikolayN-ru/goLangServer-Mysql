@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  app:
+    command: tail -f /dev/null
+    image: golang:1.12.6-stretch
+    ports:
+      - 8000:8000
+    volumes:
+      - modules:/go/pkg/mod/cache
+      - ./:/code:cached
+    working_dir: /code 
+
+volumes:
+  modules:
+    driver: local
